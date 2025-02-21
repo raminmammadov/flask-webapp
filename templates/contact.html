@@ -3,28 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Black Hat Syndicate - Recruitment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            background: rgba(30, 30, 30, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.2);
+        }
+        .form-label {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        .btn-submit {
+            background-color: #00ff00;
+            color: #121212;
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-submit:hover {
+            background-color: #008000;
+        }
+        .verification-message {
+            display: none;
+            margin-top: 20px;
+            font-style: italic;
+            color: #00ff00;
+        }
+        .hint {
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact Us</h1>
-    <p>If you have any questions, feel free to reach out using the form below:</p>
+    <div class="container">
+        <h1>Black Hat Syndicate Recruitment</h1>
+        <p>Only the elite get past this point. Are you one of them?</p>
 
-    <form action="#" method="post">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+        <form id="recruitment-form">
+            <div class="mb-3">
+                <label for="alias" class="form-label">Your Alias</label>
+                <input type="text" id="alias" name="alias" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Secure Contact Address</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="skills" class="form-label">Select Your Skillset</label>
+                <select id="skills" name="skills" class="form-select" required>
+                    <option value="Exploitation">Exploitation</option>
+                    <option value="Recon">Recon</option>
+                    <option value="Cryptography">Cryptography</option>
+                    <option value="Web Security">Web Security</option>
+                    <option value="Reverse Engineering">Reverse Engineering</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="proof" class="form-label">Prove Your Worth</label>
+                <textarea id="proof" name="proof" class="form-control" rows="3" placeholder="Paste your most impressive hack or an encoded message..." required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="receiver" class="form-label">Mysterious Contact Address</label>
+                <input type="text" id="receiver" value="YWRtaW5Ac3VwcG9ydC10ZWFtLnNlY3VyZWNvcnAuY29t" class="form-control" readonly>
+                <p class="hint">Hint: Only those who can decrypt the truth will know where to send their message.</p>
+            </div>
+            <button type="submit" class="btn-submit">Transmit to the Underground</button>
+        </form>
+        <p class="verification-message" id="verification-message">Verification in progress... Do not leave this page.</p>
+    </div>
 
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <label for="receiver">Receiver's Email:</label>
-        <input type="text" id="receiver" value="YWRtaW5Ac3VwcG9ydC10ZWFtLnNlY3VyZWNvcnAuY29t" readonly>
-
-        <button type="submit">Send Message</button>
-    </form>
-
-    <p>Note: If you're unsure about the receiver's email, maybe some decoding could help. 😉</p>
+    <script>
+        document.getElementById('recruitment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('verification-message').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('verification-message').innerText = 'Evaluation complete. Await further instructions.';
+            }, 3000);
+        });
+    </script>
 </body>
 </html>

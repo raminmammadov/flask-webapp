@@ -3,13 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mid-Term Exam</title>
+    <title>Black Hat Syndicate - Underground News</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .container {
+            max-width: 1100px;
+            margin-top: 50px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.2);
+            padding: 30px;
+            background-color: #1e1e1e;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0px 6px 15px rgba(0, 255, 0, 0.4);
+        }
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .lead {
+            font-size: 1.3rem;
+            color: #00ff00;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .navbar {
+            background-color: #000;
+            padding: 15px;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00ff00;
+        }
+        .nav-link {
+            color: #e0e0e0;
+            font-size: 1rem;
+            margin: 0 15px;
+        }
+        .nav-link:hover {
+            color: #00ff00;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #00ff00;
+            padding-bottom: 8px;
+            text-align: center;
+        }
+        .section-description {
+            text-align: center;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        .posts-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+        }
+        .post-card {
+            background: #232323;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.2);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .post-card:hover {
+            transform: scale(1.05);
+        }
+        .post-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00ff00;
+        }
+        .post-content {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        .post-img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            color: #000;
+            background-color: #00ff00;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            background-color: #00cc00;
+        }
+    </style>
 </head>
 <body>
-    <!-- flag{hiddeninhtmlsource} -->
-
-    <h1>Welcome to the Mid-Term Exam</h1>
-    <p>Let's test your web app enumeration skills!</p>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Black Hat Syndicate</a>
+            <div class="collapse navbar-collapse">
+                <!-- <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Operations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Targets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Leaks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul> -->
+            </div>
+        </div>
+    </nav>
     
+    <div class="container">
+        <h1 class="header-title">Welcome to the Underground</h1>
+        <p class="lead">Exclusive leaks, future operations, and untold stories of the dark web.</p>
+        
+        <h2 class="section-title">Hacked Targets</h2>
+        <p class="section-description">Recent successful operations by our elite team. Stay updated with the latest breaches and system takeovers.</p>
+        <div class="posts-container">
+            <div class="post-card">
+                <img src="static/hacked1.jpg" alt="Hacked Target" class="post-img">
+                <h3 class="post-title">Massive Data Breach at XYZ Corp</h3>
+                <p class="post-content">Confidential customer data exposed in one of the biggest cyber attacks of the year...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="post-card">
+                <img src="static/hacked2.jpg" alt="Hacked Target" class="post-img">
+                <h3 class="post-title">Government Database Hacked</h3>
+                <p class="post-content">Critical documents leaked from top-secret intelligence servers...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="post-card">
+                <img src="static/hacked3.jpg" alt="Hacked Target" class="post-img">
+                <h3 class="post-title">Confidential Emails Leaked</h3>
+                <p class="post-content">Thousands of private communications released in latest breach...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Future Targets</h2>
+        <p class="section-description">Upcoming plans and high-profile targets under evaluation. The next big move is always around the corner...</p>
+        <div class="posts-container">
+            <div class="post-card">
+                <img src="static/future1.jpg" alt="Future Target" class="post-img">
+                <h3 class="post-title">Upcoming Attack on Financial Institutions</h3>
+                <p class="post-content">Plans are underway to infiltrate major banking networks...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="post-card">
+                <img src="static/future2.jpg" alt="Future Target" class="post-img">
+                <h3 class="post-title">Surveillance System Takeover</h3>
+                <p class="post-content">An operation is being set in motion to hijack live surveillance feeds...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="post-card">
+                <img src="static/future3.jpg" alt="Future Target" class="post-img">
+                <h3 class="post-title">Corporate Espionage Operation</h3>
+                <p class="post-content">Covert infiltration planned into a Fortune 500 company...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
